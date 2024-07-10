@@ -28,8 +28,8 @@ const Header: React.FC = () => {
             </ul>
             <ul className={"gc_menu-container"}>
                 {
-                    menu.headerMenu.map((m: MenuItem) => (
-                        <li className={"mb-2 hidden lg:block"}>
+                    menu.headerMenu.map((m: MenuItem, i: number) => (
+                        <li key={i} className={"mb-2 hidden lg:block"}>
                             <a href={m.path}>{m.label}</a>
                         </li>
                     ))

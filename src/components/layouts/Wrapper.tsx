@@ -1,5 +1,6 @@
 import React, {ReactNode} from "react";
 import Header from "@/components/layouts/Header";
+import Footer from "@/components/layouts/Footer";
 
 
 interface WrapperProps {
@@ -13,6 +14,7 @@ const Wrapper:React.FC<WrapperProps> = ({children}) => {
             <main className={"main"}>
                 {children}
             </main>
+            <Footer />
         </div>
     )
 }
