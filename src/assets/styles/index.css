@@ -4,8 +4,15 @@
 
 body {
   margin: 0;
+  box-sizing: border-box;
   font-family: "Noto Sans", sans-serif;
+  font-size: 13px;
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @apply dark:bg-gray-800 bg-white dark:text-white;
+}
+
+a:hover {
+  text-decoration: underline;
 }

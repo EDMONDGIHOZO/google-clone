@@ -1,0 +1,33 @@
+/* this can contain styles that apply to any component. */
+.wrapper {
+    @apply min-h-screen flex flex-col;
+}
+
+.main {
+    flex: 1;
+    padding: 2rem;
+}
+
+.gc_main-header {
+    @apply p-4 w-full gap-4 flex justify-between;
+}
+
+.gc_main-header button {
+    @apply lg:capitalize uppercase;
+}
+
+.gc_menu-container {
+    @apply flex gap-4 items-center;
+}
+
+
+.gc_menu-icon {
+    font-size: 32px;
+    border-radius: 50%;
+    @apply hover:bg-gray-100 hover:cursor-pointer p-1 text-gray-800 dark:text-gray-100;
+}
+
+.gc_search-hero-logo {
+    max-width: 272px;
+    margin: auto;
+}

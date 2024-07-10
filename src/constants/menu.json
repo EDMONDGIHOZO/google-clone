@@ -1,0 +1,40 @@
+{
+  "headerMenu": [
+    {
+      "label": "Gmail",
+      "path": "https://mail.google.com"
+    },
+    {
+      "label": "Images",
+      "path": "https://images.google.com"
+    }
+  ],
+  "footerRightMenu": [
+    {
+      "label": "Privacy",
+      "path": "/privacy"
+    },
+    {
+      "label": "Terms",
+      "path": "/terms"
+    },
+    {
+      "label": "Settings",
+      "path": "/settings"
+    }
+  ],
+  "footerLeftMenu": [
+    {
+      "label": "About",
+      "path": "/about"
+    },
+    {
+      "label": "Advertising",
+      "path": "/ads"
+    },
+    {
+      "label": "Business",
+      "path": "/business"
+    }
+  ]
+}
