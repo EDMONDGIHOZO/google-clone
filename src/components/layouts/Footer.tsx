@@ -1,10 +1,11 @@
 import React from 'react'
 import menu from '@/constants/menu.json';
 import {MenuItem} from "@/types/navigation.type";
+import useCountry from "@/hooks/country";
 
 const Footer: React.FC = () => {
 
-    const country = "Rwanda";
+    const country = useCountry();
 
     return (
         <footer className={"bg-gray-100 dark:bg-gray-900 dark:text-gray-500"}>
