@@ -18,7 +18,7 @@ const useAutocomplete = ({ query, limit }: UseAutocompleteProps) => {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        if (query && query.length > 2) {
+        if (query && query.length > 3) {
             const fetchData = async () => {
                 setLoading(true);
                 setError(null);
@@ -29,7 +29,6 @@ const useAutocomplete = ({ query, limit }: UseAutocompleteProps) => {
                         const {data} = response.data;
                         setData(data)
                     }
-
                     // setData(result.items);
                 } catch (err) {
                     setError('Failed to fetch data');

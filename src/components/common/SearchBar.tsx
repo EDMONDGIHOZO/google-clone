@@ -7,8 +7,8 @@ import QuickLinks from "@/components/common/QuickLinks";
 
 const SearchBar: React.FC = () => {
     const [keywordValue, setKeywordValue] = useState<string>('');
-    const {data: suggestions, loading, error} = useAutocomplete({query: keywordValue});
     const maxChars = 3;
+    const {data: suggestions, loading, error} = useAutocomplete({query: keywordValue, limit: 6});
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const value = event.target.value;
