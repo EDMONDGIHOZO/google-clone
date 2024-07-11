@@ -31,3 +31,7 @@
     max-width: 272px;
     margin: auto;
 }
+
+.gc_button {
+    @apply bg-gray-100 dark:bg-gray-900 dark:border-transparent py-2 px-3 border hover:border-gray-300 hover:shadow rounded;
+}
