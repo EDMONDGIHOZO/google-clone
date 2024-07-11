@@ -26,7 +26,7 @@ const useAutocomplete = ({ query, limit }: UseAutocompleteProps) => {
                 try {
                     const response = await axios.get(`${searchUrl}${query}&limit=${limit || 10}`);
                     if (response && response.status === 200) {
-                        const {data} = response.data;
+                        const {data} = response;
                         setData(data)
                     }
                     // setData(result.items);

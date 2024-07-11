@@ -46,7 +46,9 @@ const SearchBar: React.FC = () => {
                             {suggestion.title}
                         </div>
                     ))}
-                    <QuickLinks />
+                    <div className={"my-4"}>
+                        <QuickLinks />
+                    </div>
                 </div>
             )}
         </>
