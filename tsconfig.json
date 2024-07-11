@@ -21,6 +21,8 @@
       "@/assets/*": ["./src/assets/*"],
       "@/constants/*": ["./src/constants/*"],
       "@/pages/*": ["./src/pages/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/types/*": ["./src/types/*"],
     }
   },
   "include": ["src", "*.tsx", "*.ts"],
