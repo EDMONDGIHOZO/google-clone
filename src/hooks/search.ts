@@ -41,7 +41,7 @@ const useAutocomplete = ({ query, limit }: UseAutocompleteProps) => {
         } else {
             setData([]);
         }
-    }, [query]);
+    }, [query, limit]);
 
     return { data, loading, error };
 };
