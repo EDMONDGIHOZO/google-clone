@@ -10,6 +10,12 @@ interface UseAutocompleteProps {
 interface DataItem {
     id: string;
     title: string;
+    thumbnail: {
+        alt_text:string,
+        width: number,
+        lqip: string,
+        height: number
+    }
 }
 
 const useAutocomplete = ({ query, limit }: UseAutocompleteProps) => {
