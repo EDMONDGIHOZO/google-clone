@@ -11,7 +11,6 @@ const useCountry = () => {
             try {
                 const response = await axios.get(geoInfo);
                 const details = response.data
-                console.log(response.data)
                 if (response && response.status === 200) {
                     setCountry(details?.country);
                 } else {

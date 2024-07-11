@@ -4,6 +4,7 @@ import Wrapper from "@/components/layouts/Wrapper";
 import logo from '@/assets/images/brand/logo.svg';
 import SearchBar from "@/components/common/SearchBar";
 import languages from '@/constants/offered-languages.json';
+import QuickLinks from "@/components/common/QuickLinks";
 
 
 const Home: React.FC = () => {
@@ -13,10 +14,7 @@ const Home: React.FC = () => {
                 <img className={"gc_search-hero-logo"} src={logo} alt="google-logo"/>
                 <SearchBar />
                 <div className={"space-x-4 flex justify-start flex-col items-center gap-4 my-5"}>
-                    <div className={"space-x-4 lg:flex justify-center hidden"}>
-                        <button className={"gc_button"}>Google Search</button>
-                        <button className={"gc_button"}>I'm Feeling Lucky</button>
-                    </div>
+                    <QuickLinks />
                     <div>
                         <p>
                             Google offered in:
