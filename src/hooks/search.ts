@@ -1,25 +1,14 @@
 import { useState, useEffect } from 'react';
 import {searchUrl} from "../constants/urls";
 import axios from 'axios';
+import {ResultsType} from "@/types/results.type";
 
 interface UseAutocompleteProps {
     query: string;
     limit?: number
 }
-
-interface DataItem {
-    id: string;
-    title: string;
-    thumbnail: {
-        alt_text:string,
-        width: number,
-        lqip: string,
-        height: number
-    }
-}
-
 const useAutocomplete = ({ query, limit }: UseAutocompleteProps) => {
-    const [data, setData] = useState<DataItem[]>([]);
+    const [data, setData] = useState<ResultsType[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
 

@@ -4,6 +4,8 @@ import {mediaPaths} from "@/assets/media-paths";
 import useAutocomplete from "../../hooks/search";
 import QuickLinks from "@/components/common/QuickLinks";
 import useClickOutside from "@/hooks/click-outside";
+import SuggestionsBox from "@/components/common/SuggestionsBox";
+import LoadingBar from "@/components/common/LoadingBar";
 
 
 const SearchBar: React.FC = () => {
@@ -42,30 +44,14 @@ const SearchBar: React.FC = () => {
                 </div>
             </div>
             {showSearchingDetails ? <div ref={ref}>
-                {loading && <div
-                    className="absolute lg:max-w-2xl dark:bg-gray-900 lg:mx-auto mx-8 left-0 right-0 mt-1 bg-white shadow-lg z-10 p-2">Searching
-                    ...</div>}
+                {loading && <LoadingBar/>}
                 {error &&
                     <div
-                        className="absolute lg:max-w-2xl lg:mx-auto left-0 right-0 mt-1  dark:bg-gray-800 bg-white border border-gray-300 border-t-transparent mx-8 rounded-b-xl shadow-lg z-10 p-2 text-red-500">{error}</div>}
+                        className="gc_result-container text-red-500">{error}</div>}
                 {suggestions.length > 0 && keywordValue.length > maxChars && (
                     <div
-                        className="absolute left-0 lg:max-w-2xl lg:mx-auto mx-8 dark:bg-gray-900 right-0 mt-1 rounded-b-2xl border border-t-0 border-gray-300 bg-white shadow-lg z-10">
-                        {suggestions?.map((suggestion) => (
-                            <div
-                                key={suggestion.id}
-                                className="border-b p-2 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer flex justify-between items-center"
-                                // onClick={() => handleSuggestionClick(suggestion.name)}
-                            >
-                                <p className={"w-11/12 truncate"}>
-                                    {suggestion.title}
-                                </p>
-                                {suggestion.thumbnail ?
-                                    <img className={"w-8 h-8 object-fit rounded-full"} src={suggestion.thumbnail.lqip}
-                                         alt={suggestion.thumbnail.alt_text}/> : null
-                                }
-                            </div>
-                        ))}
+                        className="gc_result-container">
+                        <SuggestionsBox data={suggestions}/>
                         <div className={"my-4"}>
                             <QuickLinks/>
                         </div>
