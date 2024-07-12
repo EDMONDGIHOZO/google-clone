@@ -28,7 +28,7 @@ const SearchBar: React.FC = () => {
     return (
         <div className={"lg:max-w-2xl mx-auto"}>
             <div
-                className={`border dark:border-gray-400 border-gray-300 flex mt-5 p-3 hover:shadow cursor-pointer ${keywordValue.length > maxChars && showSearchingDetails ? 'rounded-t-2xl border-b-white' : 'rounded-full'}`}>
+                className={`gc_search-input-container ${keywordValue.length > maxChars && showSearchingDetails ? 'rounded-t-2xl border-b-white' : 'rounded-full'}`}>
                 <div className="mr-2">
                     <BsSearch className={"h-6"}/>
                 </div>
@@ -51,7 +51,7 @@ const SearchBar: React.FC = () => {
                 {suggestions.length > 0 && keywordValue.length > maxChars && (
                     <div
                         className="absolute left-0 lg:max-w-2xl lg:mx-auto mx-8 dark:bg-gray-900 right-0 mt-1 rounded-b-2xl border border-t-0 border-gray-300 bg-white shadow-lg z-10">
-                        {suggestions.map((suggestion) => (
+                        {suggestions?.map((suggestion) => (
                             <div
                                 key={suggestion.id}
                                 className="border-b p-2 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer flex justify-between items-center"

@@ -34,6 +34,7 @@ const useAutocomplete = ({ query, limit }: UseAutocompleteProps) => {
                     if (response && response.status === 200) {
                         const {data} = response;
                         setData(data)
+                        console.log(data)
                     }
                     // setData(result.items);
                 } catch (err) {

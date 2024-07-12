@@ -24,7 +24,7 @@
 .gc_menu-icon {
     font-size: 32px;
     border-radius: 50%;
-    @apply hover:bg-gray-100 hover:cursor-pointer p-1 text-gray-800 dark:text-gray-100;
+    @apply hover:bg-gray-100 dark:hover:bg-gray-900 hover:cursor-pointer p-1 text-gray-800 dark:text-gray-100;
 }
 
 .gc_search-hero-logo {
@@ -32,6 +32,10 @@
     margin: auto;
 }
 
+.gc_search-input-container {
+    @apply border dark:border-gray-400 border-gray-300 flex mt-5 p-3 hover:shadow-2xl cursor-pointer;
+}
+
 .gc_button {
-    @apply bg-gray-100 dark:bg-gray-900 dark:border-transparent py-2 px-3 border hover:border-gray-300 hover:shadow rounded;
+    @apply bg-gray-100 dark:bg-gray-600 dark:border-transparent py-2 px-3 border hover:border-gray-300 hover:shadow rounded;
 }

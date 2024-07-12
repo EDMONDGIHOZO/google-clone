@@ -1,4 +1,4 @@
-.avatar-wrapper {
+.gc_avatar-wrapper {
     display: inline-block;
     padding: 2px;
     border-radius: 50%;
@@ -7,7 +7,7 @@
     animation: gradient-animation 3s ease infinite;
 }
 
-.avatar-image {
+.gc_avatar-image {
     display: block;
     border-radius: 50%;
     width: 33px;
