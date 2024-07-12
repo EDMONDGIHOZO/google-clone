@@ -2,11 +2,11 @@
   "headerMenu": [
     {
       "label": "Gmail",
-      "path": "https://mail.google.com"
+      "path": "/mail"
     },
     {
       "label": "Images",
-      "path": "https://images.google.com"
+      "path": "/images"
     }
   ],
   "footerRightMenu": [

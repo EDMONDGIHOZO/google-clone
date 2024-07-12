@@ -5,6 +5,7 @@ import {IoFlask} from "react-icons/io5";
 import {TbGridDots} from "react-icons/tb";
 import {Avatar} from "@/components/common/Avatar";
 import {randomImages} from "@/constants/urls";
+import {NavLink} from "react-router-dom";
 
 const Header: React.FC = () => {
     return (
@@ -30,19 +31,19 @@ const Header: React.FC = () => {
                 {
                     menu.headerMenu.map((m: MenuItem, i: number) => (
                         <li key={i} className={"mb-2 hidden lg:block"}>
-                            <a href={m.path}>{m.label}</a>
+                            <NavLink to={m.path} className={({ isActive }) => isActive ? 'active-link' : 'inactive-link'} >{m.label}</NavLink>
                         </li>
                     ))
                 }
                 <li className={"mx-2 hidden lg:block"}>
-                    <button>
+                    <NavLink to={"/"}>
                         <IoFlask className={"gc_menu-icon"}/>
-                    </button>
+                    </NavLink>
                 </li>
                 <li>
-                    <button>
+                    <NavLink to={"/"}>
                         <TbGridDots className={"gc_menu-icon"}/>
-                    </button>
+                    </NavLink>
                 </li>
                 <li>
                     <Avatar imageUrl={randomImages} altText={"user-profile"}/>
